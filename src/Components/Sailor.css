@@ -1,0 +1,12 @@
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
+.parrafo{
+  margin:2px
+}
+
+.imgref{
+  height: 200px;
+}
