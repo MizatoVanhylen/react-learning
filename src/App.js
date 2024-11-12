@@ -24,8 +24,28 @@ function App() {
   ]
   return (
     <div className="App">
-       <Sailor personaje="Sailor Mars" nombre="Rei Hino (火野 レイ Hino Rei)" cumpleaños="17 de Abril" edad={14} altura={1.60} signozodiacal="Aries" planeta="Marte" imagen="https://i.pinimg.com/736x/db/6a/92/db6a92c907d276953bf9b3a7406b4120.jpg"/>
-       
+      <div className="personajes">
+        <Sailor
+          personaje="Sailor Mars"
+          nombre="Rei Hino"
+          cumpleaños="17 de Abril"
+          edad={14}
+          altura={1.60}
+          signozodiacal="Aries"
+          planeta="Marte"
+          imagen="https://i.pinimg.com/736x/db/6a/92/db6a92c907d276953bf9b3a7406b4120.jpg"
+        />
+        <Sailor
+          personaje="Sailor Mars"
+          nombre="Usagi Tsukino"
+          cumpleaños="17 de Abril"
+          edad={20}
+          altura={1.60}
+          signozodiacal="Leo"
+          planeta="Marte"
+          imagen="https://i.pinimg.com/736x/db/6a/92/db6a92c907d276953bf9b3a7406b4120.jpg"
+        />
+      </div>
 
 {/* todo el codigo html ca dentro del return*/ }
      {/* <Textos nombre="Usagi" edad={16}/>
@@ -40,5 +60,7 @@ function App() {
 
 export default App;
 
-{/* crear un componente nuevo que funcione igual que la sailor moon de antes
-  nombre, descripcion, imagen */}
+{/* todo el contenido en mayusculas
+  RENDERIZADO CONDICIONAL si el signo es leo no se va a mostrar ni el planeta ni el cumpleaños
+  si la edad es mayor de 18 se le coloca signo de interrogación de lo contrario aparece la edad
+  si el nombre tiene más de 8 caracteres se coloca 3 puntos al final del nombre*/}
