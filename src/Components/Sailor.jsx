@@ -12,7 +12,7 @@ const Sailor = ({
   }) => {
   const leo = signozodiacal == "Leo" ? <p className="parrafo"> <strong>Estado:</strong> Deprimida </p> : <p>no eres leo</p>
   const mayorDeEdad = edad > 18 ? "?" : `${edad} años`;
-  const mayorOcho = nombre.length > 8 ? "..." : `${nombre}`; 
+  const mayorOcho = nombre.length > 8 ? nombre.slice(0,9) + "..." : `${nombre}`; 
   return(
     <div className="inicial" contenido>
       <h1>Personaje {personaje.toUpperCase()}</h1>

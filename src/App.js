@@ -1,11 +1,24 @@
-
 import './App.css';
 import Sailor from "./Components/Sailor";
+import { useState } from 'react';
 
 
 function App() {
-  
-  const info = [
+  const [number, setNumber] = useState(2);
+  const restar = () => {
+    if(number > 0){
+      setNumber(number - 1);
+    }
+  }
+
+  const sumar = () => {
+    if(number < 10){
+      setNumber(number + 1);
+    }
+  }
+
+
+  {/*const info = [
     {
       personaje: "Usagi",
       descripcion: "Usagi Tsukino (月野 うさぎ, Tsukino Usagi) o Sailor Moon (セーラームーン Sērā Mūn), anteriormente conocida en Latinoamérica como Serena Tsukino, es un personaje de franquicia Sailor Moon y la protagonista principal. Debido a que la popularidad de la serie se ha extendido en muchos países, se ha convertido en distintivo y frecuentemente copiado su peinado tipo odango, siendo uno de los personajes de anime más inmediatamente reconocidos e icónicos mundialmente. Es el único personaje que aparece absolutamente en todos los 20episodios del anime, así como también en los 52 actos del manga y los 51 de la serie live-action",
@@ -21,7 +34,7 @@ function App() {
       descripcion:"Luna (ルナ Runa) es un personaje de la serie de anime y manga Sailor Moon. Es una gata, consejera de las Sailor Scouts y quien reúne y les dio sus objetos de transformación.",
       imagen:"https://www.pinterest.com/pin/sailor-moon--573012752580185160/"
     }
-  ]
+  ]*/}
   return (
     <div className="App">
       <div className="personajes">
@@ -46,7 +59,9 @@ function App() {
           imagen="https://i.pinimg.com/736x/db/6a/92/db6a92c907d276953bf9b3a7406b4120.jpg"
         />
       </div>
-
+    <button onClick={() => sumar()}>+</button>
+    <button onClick={() => restar()}>-</button>
+    <p>{number}</p>
 {/* todo el codigo html ca dentro del return*/ }
      {/* <Textos nombre="Usagi" edad={16}/>
       <Textos nombre="Rei" edad={16}/>
@@ -60,7 +75,8 @@ function App() {
 
 export default App;
 
-{/* todo el contenido en mayusculas
-  RENDERIZADO CONDICIONAL si el signo es leo no se va a mostrar ni el planeta ni el cumpleaños
-  si la edad es mayor de 18 se le coloca signo de interrogación de lo contrario aparece la edad
-  si el nombre tiene más de 8 caracteres se coloca 3 puntos al final del nombre*/}
+{/* HACER QUE EL MAXIMO DE PRODUCTOS SEA 10
+  
+  RENDERIZADO CONDICIONAL
+  que el boton de sumar desaparezca cuando llegue a 10 y cuando sea 0 el menos desaparece
+  */}
