@@ -1,4 +1,4 @@
-import './Sailor.css'
+import './Sailor.css';
 
 const Sailor = ({
   personaje,
